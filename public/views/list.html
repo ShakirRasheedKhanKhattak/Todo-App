@@ -1,0 +1,37 @@
+<p><b>Search Todo</b><input type='search' class='form-control' placholder='Search' ng-model='query' /></p>
+<!-- <table class='table table-hover table-bordered'>
+    <thead>
+        <tr>
+            <th ng-repeat='field in fields' ng-click='sort(field)'>
+                {{ field | labelCase }}
+                <span ng-show='sort.field === field  && !sort.order' class='glyphicon glyphicon-chevron-down'></span>
+                <span ng-show='sort.field === field  && sort.order' class='glyphicon glyphicon-chevron-up'></span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+         <tr ng-click='show(todo.id)' ng-repeat='todo in todos | filter: query | orderBy: sort.field : sort.order'>
+            <td ng-repeat='field in fields'> {{ todo[field][0] }} </td>
+        </tr> -->
+<!--     </tbody>
+</table> --> 
+<table class='table table-hover'>
+    <thead>
+        <tr>
+            <th ng-repeat='field in fields' ng-click='sort(field)'>
+                {{ field | labelCase }}
+                <span ng-show='sort.field === field  && !sort.order' class='glyphicon glyphicon-chevron-down'></span>
+                <span ng-show='sort.field === field  && sort.order' class='glyphicon glyphicon-chevron-up'></span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-click='show(todo.id)' ng-repeat='todo in todos | filter: query | orderBy: sort.field : sort.order'>
+            <td ng-repeat='field in fields'> {{ todo[field][0] }} </td>
+            <td>
+                <!-- <button class='btn btn-danger' id="delete" ng-click='delete()'> Delete Todo </button> -->
+                <label class="glyphicon glyphicon-remove" ng-click="delete()"></label>
+            </td>
+        </tr>
+    </tbody>
+</table>

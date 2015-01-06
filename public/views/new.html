@@ -1,0 +1,16 @@
+<h2> New Todo </h2>
+
+<form name='newContact' novalidate class='form-horizontal'>
+<!--     <form-field record='todo' field='firstName' live='false' required='true'></form-field>
+    <form-field record='todo' field='lastName' live='false' required='true'></form-field> -->
+    <form-field record='todo' field='myTodo' live='false' required='true'></form-field>
+  <!--   <form-field ng-repeat='(k,v) in todo | keyFilter: "firstName" | keyFilter: "lastName" ' record='todo' field='{{k}}'></form-field> --> 
+
+    <new-field record='todo' live='false'></new-field>
+
+    <div class='row form-group'>
+        <div class='col-sm-offset-2'>
+            <button class='btn btn-primary' ng-click='save()'> Create Todo </button>
+        </div>
+    </div>
+</form>
